@@ -1,4 +1,5 @@
 # Dependencies
+theme: jekyll-theme-hyde
 markdown:         redcarpet
 highlighter:      pygments
 
