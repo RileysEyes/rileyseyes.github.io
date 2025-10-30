@@ -1,7 +1,6 @@
 # Dependencies
-theme: jekyll-theme-hyde
-markdown:         redcarpet
-highlighter:      pygments
+markdown:         kramdown
+highlighter:      rouge
 
 # Permalinks
 permalink:        pretty
@@ -12,7 +11,7 @@ title:            Riley's Eyes
 tagline:          'My creative outlet'
 description:      'A repository for the machinations of my mind'
 url:              https://rileyseyes.github.io
-baseurl:          /
+baseurl:          ""
 
 author:
   name:           'Riley'
