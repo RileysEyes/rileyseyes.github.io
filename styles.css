@@ -1,0 +1,41 @@
+:root{
+  --bg:#f8f5ee;            /* warm cream */
+  --text:#2b2b2b;
+  --muted:#6b6b6b;
+  --accent:#0b5;           /* tweak to taste */
+  --sidebar:#efe8d6;
+  --maxw:780px;
+  --serif: "Georgia", "Times New Roman", serif;
+  --sans: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--bg);color:var(--text);font:16px/1.6 var(--serif)}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+
+.sidebar{
+  position:fixed; inset:0 auto 0 0; width:260px; padding:28px 22px;
+  background:var(--sidebar); border-right:1px solid rgba(0,0,0,.06);
+}
+.sidebar h1{margin:0 0 8px;font:700 26px/1.1 var(--serif)}
+.sidebar .tagline{margin:0 0 18px;color:var(--muted);font:14px var(--sans)}
+.sidebar nav{display:flex;flex-direction:column;gap:10px}
+.sidebar nav a{font:600 15px var(--sans)}
+
+.content{
+  margin-left:260px; padding:42px 28px; display:flex; justify-content:center;
+}
+.content article{width:100%; max-width:var(--maxw)}
+h2{font:700 28px/1.2 var(--serif); margin:26px 0 12px}
+p, li{font-size:18px}
+.postlist{list-style:none;padding:0;margin:0}
+.postlist li{margin:6px 0}
+.date{color:var(--muted);font:14px var(--sans)}
+.embed{margin:12px 0;max-width:var(--maxw)}
+/* footnotes */
+sup.fn{font:12px;vertical-align:super}
+.footnotes{border-top:1px solid rgba(0,0,0,.1);margin-top:24px;padding-top:6px}
+@media (max-width:900px){
+  .sidebar{position:static;width:auto}
+  .content{margin-left:0}
+}
