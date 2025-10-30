@@ -1,37 +1,44 @@
----
-layout: default
-title: Home
----
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Riley’s Eyes</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <aside class="sidebar">
+    <h1>Riley’s Eyes</h1>
+    <p class="tagline">Essays · Visuals · Sound</p>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="posts/welcome.html">Essays</a>
+      <a href="posts/music.html">Music</a>
+      <a href="posts/visuals.html">Visuals</a>
+      <a href="about.html">About</a>
+    </nav>
+  </aside>
 
-<div class="posts">
-  {% for post in paginator.posts %}
-  <div class="post">
-    <h1 class="post-title">
-      <a href="{{ post.url }}">
-        {{ post.title }}
-      </a>
-    </h1>
+  <main class="content">
+    <article>
+      <h2>Latest</h2>
+      <ul class="postlist">
+        <li><a href="posts/welcome.html">Welcome to Riley’s Eyes</a> <span class="date">· today</span></li>
+      </ul>
 
-    <span class="post-date">{{ post.date | date_to_string }}</span>
+      <h2>Featured video</h2>
+      <div class="embed">
+        <!-- Replace abcd1234 with your YouTube video ID -->
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/abcd1234" title="YouTube video" frameborder="0" allowfullscreen></iframe>
+      </div>
 
-    {{ post.content }}
-  </div>
-  {% endfor %}
-</div>
-
-<div class="pagination">
-  {% if paginator.next_page %}
-    <a class="pagination-item older" href="{{ site.baseurl }}page{{paginator.next_page}}">Older</a>
-  {% else %}
-    <span class="pagination-item older">Older</span>
-  {% endif %}
-  {% if paginator.previous_page %}
-    {% if paginator.page == 2 %}
-      <a class="pagination-item newer" href="{{ site.baseurl }}">Newer</a>
-    {% else %}
-      <a class="pagination-item newer" href="{{ site.baseurl }}page{{paginator.previous_page}}">Newer</a>
-    {% endif %}
-  {% else %}
-    <span class="pagination-item newer">Newer</span>
-  {% endif %}
-</div>
+      <h2>Featured track</h2>
+      <div class="embed">
+        <!-- Replace YOUR_TRACK_URL with your SoundCloud track URL -->
+        <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay"
+          src="https://w.soundcloud.com/player/?url=YOUR_TRACK_URL&color=%23c4b28a"></iframe>
+      </div>
+    </article>
+  </main>
+</body>
+</html>
